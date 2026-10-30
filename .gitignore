@@ -1,0 +1,7 @@
+target/
+build.log
+.idea/
+*.iml
+.env
+.DS_Store
+.vscode/

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Resume Enhancer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>AI Resume Enhancer</h1>
+    <p class="sub">Upload your resume and let an AWS Bedrock agent improve it.</p>
+
+    <form id="form">
+      <label for="file">Resume (PDF, DOCX or TXT, max 5MB)</label>
+      <input id="file" name="file" type="file" accept=".pdf,.docx,.txt" required>
+
+      <label for="jd">Target job description (optional)</label>
+      <textarea id="jd" name="jobDescription" rows="6" placeholder="Paste the job description to tailor your resume"></textarea>
+
+      <button id="submit" type="submit">Enhance resume</button>
+    </form>
+
+    <div id="status" role="status" aria-live="polite"></div>
+
+    <section id="result" hidden>
+      <div class="bar">
+        <h2>Enhanced result</h2>
+        <button id="copy" type="button">Copy</button>
+      </div>
+      <pre id="output"></pre>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
